@@ -74,7 +74,7 @@ Summary: PostgreSQL client programs
 Name: postgresql
 %global majorversion 9.4
 Version: 9.4.26
-Release: sl2%{?dist}
+Release: sl3%{?dist}
 
 # The PostgreSQL license is very similar to other MIT licenses, but the OSI
 # recognizes it as an independent license, so we do as well.
@@ -1107,6 +1107,7 @@ fi
 %dir %{_libexecdir}/initscripts/legacy-actions/postgresql
 %{_libexecdir}/initscripts/legacy-actions/postgresql/*
 %{_libexecdir}/postgresql-check-db-dir
+%{_libexecdir}/postgresql-ctl
 %dir %{_sysconfdir}/postgresql-setup
 %dir %{_sysconfdir}/postgresql-setup/upgrade
 %config %{_sysconfdir}/postgresql-setup/upgrade/*.conf
