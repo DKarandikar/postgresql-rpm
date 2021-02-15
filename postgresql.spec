@@ -74,7 +74,7 @@ Summary: PostgreSQL client programs
 Name: postgresql
 %global majorversion 9.4
 Version: 9.4.26
-Release: sl3%{?dist}
+Release: sl4%{?dist}
 
 # The PostgreSQL license is very similar to other MIT licenses, but the OSI
 # recognizes it as an independent license, so we do as well.
@@ -358,9 +358,12 @@ benchmarks.
 ( cd %_sourcedir; sha256sum -c %{SOURCE16}; sha256sum -c %{SOURCE17} )
 %setup -q -a 12
 %patch1 -p1
+%patch2 -p1
 %patch3 -p1
 %patch4 -p1
+%patch5 -p1
 %patch6 -p1
+%patch7 -p1
 
 # We used to run autoconf here, but there's no longer any real need to,
 # since Postgres ships with a reasonably modern configure script.
